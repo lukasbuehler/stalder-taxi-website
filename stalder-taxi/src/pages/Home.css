@@ -1,0 +1,28 @@
+.Home {
+  text-align: centers;
+}
+
+.title {
+  height: 40vh;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.titleImage {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.bookingDiv {
+  text-align: center;
+  height: 100%;
+  min-height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
