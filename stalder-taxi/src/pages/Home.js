@@ -1,4 +1,4 @@
-import { Button, Container, Grid, Typography } from "@material-ui/core";
+import { Button, Container, Grid, Hidden, Typography } from "@material-ui/core";
 import React from "react";
 
 import "./Home.css";
@@ -9,8 +9,14 @@ export default function Home() {
       <Grid container spacing={3}>
         <Grid item xs={12}>
           <div className={"title"}>
-            <Typography variant="h1">Stalder Taxi-Service</Typography>
-            <Typography variant="h4">Der private non-profit Taxi-Service Ihres Vertrauens!</Typography>
+            <Hidden smDown>
+              <Typography variant="h1">Stalder Taxi-Service</Typography>
+              <Typography variant="h4">Der private non-profit Taxi-Service Ihres Vertrauens!</Typography>
+            </Hidden>
+            <Hidden mdUp>
+              <Typography variant="h4">Stalder Taxi-Service</Typography>
+              <Typography variant="h6">Der private non-profit Taxi-Service Ihres Vertrauens!</Typography>
+            </Hidden>
           </div>
         </Grid>
         <Grid item xs={12} sm={6}>

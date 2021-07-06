@@ -9,6 +9,8 @@ import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 
 import "./App.css";
+import { Hidden, IconButton } from "@material-ui/core";
+import MenuIcon from "@material-ui/icons/Menu";
 
 export default function App() {
   return (
@@ -16,25 +18,35 @@ export default function App() {
       <div>
         <AppBar position="static" color="default" elevation={1}>
           <Toolbar className={"toolbar"}>
-            <div className={"toolbarDiv"}>
+            <Hidden xsDown>
+              <div className={"toolbarDiv"}>
+                <Typography variant="h6" color="inherit" noWrap>
+                  Stalder Taxi-Service
+                </Typography>
+                <nav className={"navbar"}>
+                  <Button variant="text" color="primary" href="/" className={"navToolbarButton"}>
+                    Home
+                  </Button>
+                  <Button variant="text" color="primary" href="/fleet" className={"navToolbarButton"}>
+                    Flotte
+                  </Button>
+                  <Button variant="text" color="primary" href="/about" className={"navToolbarButton"}>
+                    Über uns
+                  </Button>
+                </nav>
+              </div>
+              <Button className={"navLoginButton"} href="#" color="primary" variant="outlined">
+                Login
+              </Button>
+            </Hidden>
+            <Hidden smUp style={{ align: "center" }}>
               <Typography variant="h6" color="inherit" noWrap>
                 Stalder Taxi-Service
               </Typography>
-              <nav className={"navbar"}>
-                <Button variant="text" color="primary" href="/" className={"navToolbarButton"}>
-                  Home
-                </Button>
-                <Button variant="text" color="primary" href="/fleet" className={"navToolbarButton"}>
-                  Flotte
-                </Button>
-                <Button variant="text" color="primary" href="/about" className={"navToolbarButton"}>
-                  Über uns
-                </Button>
-              </nav>
-            </div>
-            <Button className={"navLoginButton"} href="#" color="primary" variant="outlined">
-              Login
-            </Button>
+              <IconButton aria-label="menu">
+                <MenuIcon />
+              </IconButton>
+            </Hidden>
           </Toolbar>
         </AppBar>
 
